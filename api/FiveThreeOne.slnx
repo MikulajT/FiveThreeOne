@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/FiveThreeOne.Api/FiveThreeOne.Api.csproj" />
+  <Project Path="src/FiveThreeOne.Application/FiveThreeOne.Application.csproj" Id="0d034379-892d-4e88-a230-071321e4c5b4" />
+  <Project Path="src/FiveThreeOne.Domain/FiveThreeOne.Domain.csproj" Id="5af8fe4b-809e-400e-a0a0-d652f9e78620" />
+  <Project Path="src/FiveThreeOne.Infrastructure/FiveThreeOne.Infrastructure.csproj" Id="df48835e-6225-4b3e-9d1b-e14ee45c4af0" />
+</Solution>
