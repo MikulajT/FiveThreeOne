@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="Features\Cycles\Commands\" />
     <Folder Include="Features\Cycles\Queries\" />
     <Folder Include="Features\Workouts\" />
@@ -18,11 +17,13 @@
     <PackageReference Include="AutoMapper" Version="16.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FiveThreeOne.Domain\FiveThreeOne.Domain.csproj" />
+    <ProjectReference Include="..\FiveThreeOne.Infrastructure\FiveThreeOne.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

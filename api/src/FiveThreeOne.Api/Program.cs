@@ -1,6 +1,7 @@
 
 using FiveThreeOne.Infrastructure.Persistence;
 using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
@@ -19,12 +20,13 @@ namespace FiveThreeOne
 
             // Add Application Layer - MediatR & Validation
             // This scans the Application assembly for all Handlers and Validators
-            var applicationAssembly = typeof(FiveThreeOne.Application.AssemblyReference).Assembly;
+            var applicationAssembly = typeof(Application.AssemblyReference).Assembly;
 
             builder.Services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssembly(applicationAssembly));
 
             builder.Services.AddValidatorsFromAssembly(applicationAssembly);
+            builder.Services.AddFluentValidationAutoValidation();
 
             // Add API Concerns - Controllers & CORS
             builder.Services.AddControllers();
@@ -46,6 +48,7 @@ namespace FiveThreeOne
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FiveThreeOne API", Version = "v1" });
             });
+
 
             var app = builder.Build();
 
@@ -74,6 +77,8 @@ namespace FiveThreeOne
                     db.Database.Migrate();
                 }
             }
+
+            app.UsePathBase(new PathString("/api"));
 
             app.Run();
 
