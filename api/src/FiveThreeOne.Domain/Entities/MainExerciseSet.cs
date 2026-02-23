@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FiveThreeOne.Domain.Entities
+﻿namespace FiveThreeOne.Domain.Entities
 {
     public class MainExerciseSet : BaseEntity
     {

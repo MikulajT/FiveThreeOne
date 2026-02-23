@@ -2,11 +2,9 @@
 
 namespace FiveThreeOne.Domain.Entities
 {
-    public class Template : BaseEntity
+    public class Exercise : BaseEntity
     {
         public string Name { get; set; }
-        public TemplateType Type { get; set; }
-
-        List<Workout> Workouts { get; set; }
+        public ExerciseMovementPatternType MovementPatternType { get; set; }
     }
 }

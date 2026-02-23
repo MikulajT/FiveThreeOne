@@ -1,8 +1,5 @@
 ﻿using FiveThreeOne.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FiveThreeOne.Infrastructure.Persistence
 {
@@ -14,6 +11,7 @@ namespace FiveThreeOne.Infrastructure.Persistence
         public DbSet<MainExercise> MainExercises { get; set; }
         public DbSet<MainExerciseSet> MainExerciseSets { get; set; }
         public DbSet<AssistanceExercise> AssistanceExercises { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
